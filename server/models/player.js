@@ -1,0 +1,25 @@
+// skeleton of our player model
+
+const mongoose=require('mongoose');
+
+const playerSchema =new mongoose.Schema({
+    nickname: {
+        type:String ,
+        trim: true,
+    },
+    socketID: {
+        type:String,
+    },
+    points: {
+        type: Number,
+        default: 0,
+    },
+    playerType: {
+        // X or O
+        required: true,
+        type: String,
+    }
+});
+
+
+module.exports =playerSchema;
